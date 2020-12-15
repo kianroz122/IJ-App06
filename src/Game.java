@@ -22,6 +22,7 @@ public class Game
     private Parser parser;
     private Room currentRoom;
     private Map map;
+    private Player player;
     /**
      * Create the game and initialise its internal map.
      */
@@ -29,6 +30,7 @@ public class Game
     {
         parser = new Parser();
         map = new Map();
+        player = new Player("John");
         play();
     }
 
