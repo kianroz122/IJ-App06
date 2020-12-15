@@ -7,57 +7,37 @@
 
 public class Map
 {
-    private Room square;
-    private Room revolutions,
-            antelope,
-            queensHead,
-
-            butlers,
-            greyhound,
-            trafalgar,
-            threecrown,
-            queenvic,
-            lordnelson, harbourmaster, horseandjockey, vineyard, priory, crown, home;
+    private Room square = new Room("A pub in each direction, which do you visit first?");
+    private Room revolutions = new Room("in rev's, the floors sticky"),
+            antelope = new Room("the bouncer doesn't even ask for ID!"),
+            queensHead = new Room("//"),
+            butlers = new Room("they serve pizza in here"),
+            greyhound = new Room("//"),
+            trafalgar = new Room("//"),
+            threeCrown = new Room("//"),
+            queenvic = new Room("//"),
+            lordNelson = new Room("//"),
+            harbourmaster,
+            horseAndJockey,
+            vineyard,
+            priory,
+            crown,
+            home;
     private Room startRoom;
 
     public Map()
     {
         createRooms();
         startRoom = square; //Game starts outside
+        butlers.setItem(Items.PIZZA);
     }
+
     /**
      * Create all the rooms and link their exits together.
      */
-    private void createRooms() {
-        Room square, revolutions, antelope, queenshead, butlers, house;
-
-        // create the rooms
-        square = new Room("A pub in each direction, which do you visit first?");
-        //sets the description for when user is outside//
-        square.setDescription("You are in the town square, in the middle of four pubs, the bouncers don't look very friendly");
-
-        //all of the rooms//
-        revolutions = new Room("in rev's, the floors sticky");
-
-        antelope = new Room("the bouncer doesn't even ask for ID!");
-
-        queenshead = new Room("//");
-
-        butlers = new Room("they serve pizza in here");
-        butlers.setItem(Items.PIZZA);
-
-        greyhound = new Room("//");
-
-        trafalgar = new Room("//");
-
-        threecrown = new Room("//");
-
-        queenvic = new Room ("//");
-
-        lordnelson = new Room ("//");
-
-
-//connect each room//
+    private void createRooms()
+    {
+        //connect each room//
         connectSquare();
         connectRevolutions();
         connectQueenshead();
@@ -91,38 +71,42 @@ public class Map
     {
         queensHead.setExit("east", square);
     }
+
     private void connectRevolutions()
     {
         revolutions.setExit("west", square);
     }
 
-    private void connectButlers() {
+    private void connectButlers()
+    {
         butlers.setExit("south", square);
     }
 
-//The antelope goes north back to the square or south to greyhound//
-    private void connectAntelope() {
+    //The antelope goes north back to the square or south to greyhound//
+    private void connectAntelope()
+    {
         antelope.setExit("north", square);
         antelope.setExit("south", greyhound);
         antelope.setExit("east", trafalgar);
     }
 
-//The greyhound leads north to the antelope, west to the queenvic and south to the lordnelson//
-    private void connectGreyhound() {
+    //The greyhound leads north to the antelope, west to the queenvic and south to the lordnelson//
+    private void connectGreyhound()
+    {
         greyhound.setExit("north", antelope);
         greyhound.setExit("west", queenvic);
-        greyhound.setExit("south", lordnelson);
+        greyhound.setExit("south", lordNelson);
     }
 
     private void connectTrafalgar()
     {
         trafalgar.setExit("west", antelope);
-        trafalgar.setExit("south", threecrown);
+        trafalgar.setExit("south", threeCrown);
     }
 
     private void connectThreecrown()
     {
-    threecrown.setExit("north", trafalgar);
+        threeCrown.setExit("north", trafalgar);
     }
 
     private void connectQueenvic()
@@ -132,25 +116,25 @@ public class Map
 
     private void connectLordnelson()
     {
-        lordnelson.setExit("north", greyhound);
-        lordnelson.setExit("east", horseandjockey);
-        lordnelson.setExit("south", vineyard);
-        lordnelson.setExit("west", harbourmaster);
+        lordNelson.setExit("north", greyhound);
+        lordNelson.setExit("east", horseAndJockey);
+        lordNelson.setExit("south", vineyard);
+        lordNelson.setExit("west", harbourmaster);
     }
 
     private void connectHarbourmaster()
     {
-        harbourmaster.setExit("east", lordnelson);
+        harbourmaster.setExit("east", lordNelson);
     }
 
     private void connectHorseandjockey()
     {
-        horseandjockey.setExit("west", lordnelson);
+        horseAndJockey.setExit("west", lordNelson);
     }
 
     private void connectPriory()
     {
-        priory.setExit("north", horseandjockey);
+        priory.setExit("north", horseAndJockey);
     }
 
     private void connectCrown()
@@ -160,7 +144,7 @@ public class Map
 
     private void connectVineyard()
     {
-        vineyard.setExit("north", lordnelson);
+        vineyard.setExit("north", lordNelson);
         vineyard.setExit("south", home);
     }
 
@@ -169,7 +153,7 @@ public class Map
         home.setExit("north", vineyard);
     }
 
-    private Room getStartRoom()
+    public Room getStartRoom()
     {
         return startRoom;
     }

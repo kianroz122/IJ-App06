@@ -19,10 +19,10 @@
 
 public class Game 
 {
-    private Parser parser;
+    private final Parser parser;
     private Room currentRoom;
-    private Map map;
-    private Player player;
+    private final Map map;
+    private final Player player;
     /**
      * Create the game and initialise its internal map.
      */
@@ -30,6 +30,7 @@ public class Game
     {
         parser = new Parser();
         map = new Map();
+        currentRoom = map.getStartRoom();
         player = new Player("John");
         play();
     }
@@ -61,9 +62,12 @@ public class Game
     private void printWelcome()
     {
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
+        System.out.println("Welcome to Blacked Out");
+        System.out.println("It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well");
+        System.out.println("Type '" + CommandWord.HELP + "' if you need help. ");
+        System.out.println();
+        System.out.println();
+        System.out.println("Sober metre: "+ player.getSoberRating());
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
