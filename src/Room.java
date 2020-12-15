@@ -22,7 +22,7 @@ public class Room
     // String is the key to a room in that direction
     // east would be an exit that goes to the Room
     private HashMap<String, Room> exits;
-
+    private Items item;
     /**
      * Create a room described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
@@ -91,6 +91,16 @@ public class Room
     public Room getExit(String direction) 
     {
         return exits.get(direction);
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public void setItem(Items item)
+    {
+
     }
 }
 
