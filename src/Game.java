@@ -97,11 +97,38 @@ public class Game
                 goRoom(command);
                 break;
 
+            case PICKUP:
+                pickupItem(command);
+                break;
+
             case QUIT:
                 wantToQuit = quit(command);
                 break;
         }
         return wantToQuit;
+    }
+
+    private void pickupItem(Command command)
+    {
+        if(!command.hasSecondWord())
+        {
+            // if there is no second word, we don't know where to go...
+            System.out.println("Pick up what?");
+            return;
+        }
+        String word = command.getSecondWord();
+        Beers item = currentRoom.getItem();
+
+        if(word.equals(item.toString()))
+        {
+            player.pickup(item);
+            currentRoom.removeItem();
+            System.out.println("Picked up " + item);
+        }
+        else
+        {
+            System.out.println("there is no " + word + " in this room");
+        }
     }
 
     // implementations of user commands:

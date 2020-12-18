@@ -7,35 +7,35 @@
 
 public class Map
 {
-    private Room square = new Room("A pub in each direction, which do you visit first?");
+    private Room square = new Room("in the square with a pub in each direction, which do you visit first?");
     private Room revolutions = new Room("in rev's, the floors sticky"),
             antelope = new Room("the bouncer doesn't even ask for ID!"),
-            queensHead = new Room("//"),
+            queensHead = new Room("queensHead"),
             butlers = new Room("they serve pizza in here"),
-            greyhound = new Room("//"),
-            trafalgar = new Room("//"),
-            threeCrown = new Room("//"),
-            queenvic = new Room("//"),
-            lordNelson = new Room("//"),
-            harbourmaster,
-            horseAndJockey,
-            vineyard,
-            priory,
-            crown,
-            home;
+            greyhound = new Room("greyhound"),
+            trafalgar = new Room("trafalgar"),
+            threeCrown = new Room("threeCrown"),
+            queenvic = new Room("queenvic"),
+            lordNelson = new Room("lordNelson"),
+            harbourmaster = new Room("harbourmaster"),
+            horseAndJockey = new Room("horseAndJockey"),
+            vineyard = new Room("vineyard"),
+            priory = new Room(" priory"),
+            crown = new Room("crown"),
+            home = new Room("home");
     private Room startRoom;
 
     public Map()
     {
-        createRooms();
+        connectRooms();
         startRoom = square; //Game starts outside
-        butlers.setItem(Items.PIZZA);
+        square.setItem(Beers.NEWCASTLE);
     }
 
     /**
      * Create all the rooms and link their exits together.
      */
-    private void createRooms()
+    private void connectRooms()
     {
         //connect each room//
         connectSquare();
@@ -63,6 +63,7 @@ public class Map
         square.setExit("east", revolutions);
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
+        revolutions.setItem(Beers.NEWCASTLE);
     }
 
 //These 3 rooms only go back to the square//
@@ -75,6 +76,7 @@ public class Map
     private void connectRevolutions()
     {
         revolutions.setExit("west", square);
+
     }
 
     private void connectButlers()
