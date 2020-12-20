@@ -101,12 +101,22 @@ public class Game
                 pickupItem(command);
                 break;
 
+            case DRINK:
+                drink(command);
+                break;
+
             case QUIT:
                 wantToQuit = quit(command);
                 break;
         }
         return wantToQuit;
     }
+
+    private void drink(Command command)
+    {
+       // player.setSoberRating(int number);
+    }
+
 
     private void pickupItem(Command command)
     {
