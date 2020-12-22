@@ -6,7 +6,7 @@ public class Player
     private boolean take;
     private String name;
     private ArrayList<Beers> itemList = new ArrayList();
-    private int sober = 100;
+    public int sober = 100;
 
     public Player(String name)
     {
