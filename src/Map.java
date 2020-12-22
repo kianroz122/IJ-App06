@@ -1,29 +1,29 @@
 /**
  * Write a description of class Map here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Kian, Alex, Atish)
+ * @version (20/12/20)
  */
 
 public class Map
 {
-    private Room square = new Room("in the square with a pub in each direction, which do you visit first?");
-    private Room revolutions = new Room("in rev's, the floors sticky"),
-            antelope = new Room("the bouncer doesn't even ask for ID!"),
-            queensHead = new Room("queensHead"),
-            butlers = new Room("they serve pizza in here"),
-            greyhound = new Room("greyhound"),
-            trafalgar = new Room("trafalgar"),
-            threeCrown = new Room("threeCrown"),
-            queenvic = new Room("queenvic"),
-            lordNelson = new Room("lordNelson"),
-            harbourmaster = new Room("harbourmaster"),
-            horseAndJockey = new Room("horseAndJockey"),
-            vineyard = new Room("vineyard"),
-            priory = new Room(" priory"),
-            crown = new Room("crown"),
-            home = new Room("home");
-    private Room startRoom;
+    private final Room square = new Room("in the square with a pub in each direction, which do you visit first?");
+    private final Room revolutions = new Room("in rev's, the floors sticky");
+    private final Room antelope = new Room("the bouncer doesn't even ask for ID!");
+    private final Room queensHead = new Room("queensHead");
+    private final Room butlers = new Room("Butlers they serve pizza in here");
+    private final Room greyhound = new Room("greyhound");
+    private final Room trafalgar = new Room("trafalgar");
+    private final Room threeCrown = new Room("threeCrown");
+    private final Room queenvic = new Room("queenvic");
+    private final Room lordNelson = new Room("lordNelson");
+    private final Room harbourmaster = new Room("harbourmaster");
+    private final Room horseAndJockey = new Room("horseAndJockey");
+    private final Room vineyard = new Room("vineyard");
+    private final Room priory = new Room(" priory");
+    private final Room crown = new Room("crown");
+    private final Room home = new Room("home");
+    private final Room startRoom;
     
     public Map()
     {
