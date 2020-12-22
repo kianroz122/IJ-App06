@@ -2,10 +2,13 @@
 public enum Beers
 {
     NONE("none",0),
-    FOSTERS("fosters",5),
+    REDSTRIPE("redstripe",5),
     NEWCASTLE("newcastle",6),
-    COMDEN_HILLS("comdenhills",7),
-    HOPHOUSE("hophouse",6);
+    CAMDEN_HELLS("comdenhills",7),
+    STRONGBOW("strongbow",4),
+    HOPHOUSE("hophouse",6),
+    VODKA("vodka",35),
+    TEQUILA("tequila",50);
 
     private String beerString;
     private int alcoholLevel;
