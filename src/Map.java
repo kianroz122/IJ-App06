@@ -24,7 +24,7 @@ public class Map
             crown,
             home;
     private Room startRoom;
-    
+
     public Map()
     {
         createRooms();
