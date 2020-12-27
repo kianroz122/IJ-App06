@@ -30,6 +30,7 @@ public class Map
         connectRooms();
         startRoom = square; //Game starts outside
         square.setItem(Beers.NEWCASTLE);
+
     }
 
     /**
@@ -63,7 +64,7 @@ public class Map
         square.setExit("east", revolutions);
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
-        revolutions.setItem(Beers.NEWCASTLE);
+        square.setItem(Beers.NEWCASTLE);
     }
 
 //These 3 rooms only go back to the square//
@@ -76,12 +77,13 @@ public class Map
     private void connectRevolutions()
     {
         revolutions.setExit("west", square);
-
+        revolutions.setItem(Beers.REDSTRIPE);
     }
 
     private void connectButlers()
     {
         butlers.setExit("south", square);
+        butlers.setItem(Beers.STRONGBOW);
     }
 
     //The antelope goes north back to the square or south to greyhound//
