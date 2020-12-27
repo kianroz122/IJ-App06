@@ -9,20 +9,20 @@ public class Map
 {
     private final Room square = new Room("in the square with a pub in each direction, which do you visit first?");
     private final Room revolutions = new Room("in rev's, the floors sticky");
-    private final Room antelope = new Room("the bouncer doesn't even ask for ID!");
-    private final Room queensHead = new Room("queensHead");
-    private final Room butlers = new Room("Butlers they serve pizza in here");
-    private final Room greyhound = new Room("greyhound");
-    private final Room trafalgar = new Room("trafalgar");
-    private final Room threeCrown = new Room("threeCrown");
-    private final Room queenvic = new Room("queenvic");
-    private final Room lordNelson = new Room("lordNelson");
-    private final Room harbourmaster = new Room("harbourmaster");
-    private final Room horseAndJockey = new Room("horseAndJockey");
-    private final Room vineyard = new Room("vineyard");
-    private final Room priory = new Room(" priory");
-    private final Room crown = new Room("crown");
-    private final Room home = new Room("home");
+    private final Room antelope = new Room("in the Antelope, the bouncer doesn't even ask for ID!");
+    private final Room queensHead = new Room("in the queensHead");
+    private final Room butlers = new Room("in Butlers");
+    private final Room greyhound = new Room("in the greyhound");
+    private final Room trafalgar = new Room("in the trafalgar");
+    private final Room threeCrown = new Room("in the threeCrown");
+    private final Room queenvic = new Room("in the queenvic");
+    private final Room lordNelson = new Room("in the lordNelson");
+    private final Room harbourmaster = new Room("in the harbourmaster");
+    private final Room horseAndJockey = new Room("in the horseAndJockey");
+    private final Room vineyard = new Room("in the vineyard");
+    private final Room priory = new Room("in the priory");
+    private final Room crown = new Room("in the crown");
+    private final Room home = new Room("in the home");
     private final Room startRoom;
     
     public Map()
@@ -54,6 +54,7 @@ public class Map
         connectCrown();
         connectVineyard();
         connectHome();
+        connectAntelope();
     }
 
 
@@ -70,6 +71,7 @@ public class Map
 //These 3 rooms only go back to the square//
 
     private void connectQueenshead()
+
     {
         queensHead.setExit("east", square);
     }
@@ -92,6 +94,7 @@ public class Map
         antelope.setExit("north", square);
         antelope.setExit("south", greyhound);
         antelope.setExit("east", trafalgar);
+        antelope.setItem(Beers.VODKA);
     }
 
     //The greyhound leads north to the antelope, west to the queenvic and south to the lordnelson//
