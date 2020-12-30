@@ -4,7 +4,7 @@ public enum Beers
     NONE("none",0),
     REDSTRIPE("redstripe",5),
     NEWCASTLE("newcastle",6),
-    CAMDEN_HELLS("comdenhills",7),
+    CAMDEN_HELLS("camdenhells",7),
     STRONGBOW("strongbow",4),
     HOPHOUSE("hophouse",6),
     VODKA("vodka",35),
