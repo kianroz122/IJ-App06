@@ -29,7 +29,6 @@ public class Map
     {
         connectRooms();
         startRoom = square; //Game starts outside
-        square.setItem(Beers.NEWCASTLE);
 
     }
 
@@ -75,6 +74,7 @@ public class Map
 
     {
         queensHead.setExit("east", square);
+        queensHead.setItem(Beers.CAMDEN_HELLS);
     }
 
     private void connectRevolutions()
@@ -117,11 +117,13 @@ public class Map
     private void connectThreecrown()
     {
         threeCrown.setExit("north", trafalgar);
+        threeCrown.setItem(Beers.NONE);
     }
 
     private void connectQueenvic()
     {
         queenvic.setExit("east", greyhound);
+        queenvic.setItem(Beers.NEWCASTLE);
     }
 
     private void connectLordnelson()
@@ -148,22 +150,26 @@ public class Map
     private void connectPriory()
     {
         priory.setExit("north", horseAndJockey);
+        priory.setItem(Beers.NONE);
     }
 
     private void connectCrown()
     {
         crown.setExit("north", priory);
+        crown.setItem(Beers.STRONGBOW);
     }
 
     private void connectVineyard()
     {
         vineyard.setExit("north", lordNelson);
         vineyard.setExit("south", home);
+        vineyard.setItem(Beers.HOPHOUSE);
     }
 
     private void connectHome()
     {
         home.setExit("north", vineyard);
+        home.setItem(Beers.NONE);
     }
 
     public Room getStartRoom()
