@@ -17,13 +17,18 @@ import java.util.Random;
  * 
  * Modified and extended by Derek and Andrei
  */
-test
+//test
 public class Game 
 {
     private final Parser parser;
     private Room currentRoom;
     private final Player player;
-    Random rand = new Random();
+    Random rand;
+
+    {
+        rand = new Random();
+    }
+
     /**
      * Create the game and initialise its internal map.
      */
@@ -115,7 +120,10 @@ public class Game
 
     private void drink(Command command)
     {
-       // player.setSoberRating(int number);
+       //player.getSoberRating();
+       //int n = rand.nextInt();
+        // player.setSoberRating(soberRating - n)
+        // System.out.print(soberRating);
     }
 
 

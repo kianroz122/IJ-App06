@@ -2,11 +2,10 @@ import java.util.ArrayList;
 
 public class Player
 {
-    private int soberRating;
+    public int soberRating = 100;
     private boolean take;
     private String name;
     private ArrayList<Beers> itemList = new ArrayList();
-    public int sober = 100;
 
     public Player(String name)
     {
