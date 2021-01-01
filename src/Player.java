@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player
 {
-    public int soberRating = 100;
+    private int soberRating = 100;
     private boolean take;
     private String name;
     private ArrayList<Beers> itemList = new ArrayList();

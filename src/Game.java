@@ -120,10 +120,11 @@ public class Game
 
     private void drink(Command command)
     {
-       //player.getSoberRating();
-       //int n = rand.nextInt();
-        // player.setSoberRating(soberRating - n)
-        // System.out.print(soberRating);
+       player.getSoberRating();
+       Beers.getAlchoholLevel();
+        int n = rand.nextInt();
+        player.setSoberRating(player.getSoberRating()- n);
+        System.out.print("Sober Rating = " + player.getSoberRating());
     }
 
 
