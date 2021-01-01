@@ -66,6 +66,7 @@ public class Map
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
         square.setItem(Beers.NEWCASTLE);
+        square.setItem(Beers.VODKA);
     }
 
 //These 3 rooms only go back to the square//
@@ -103,12 +104,14 @@ public class Map
         greyhound.setExit("north", antelope);
         greyhound.setExit("west", queenvic);
         greyhound.setExit("south", lordNelson);
+        greyhound.setItem(Beers.NONE);
     }
 
     private void connectTrafalgar()
     {
         trafalgar.setExit("west", antelope);
         trafalgar.setExit("south", threeCrown);
+        trafalgar.setItem(Beers.REDSTRIPE);
     }
 
     private void connectThreecrown()
@@ -127,16 +130,19 @@ public class Map
         lordNelson.setExit("east", horseAndJockey);
         lordNelson.setExit("south", vineyard);
         lordNelson.setExit("west", harbourmaster);
+        lordNelson.setItem(Beers.HOPHOUSE);
     }
 
     private void connectHarbourmaster()
     {
         harbourmaster.setExit("east", lordNelson);
+        harbourmaster.setItem(Beers.STRONGBOW);
     }
 
     private void connectHorseandjockey()
     {
         horseAndJockey.setExit("west", lordNelson);
+        horseAndJockey.setItem(Beers.TEQUILA);
     }
 
     private void connectPriory()
