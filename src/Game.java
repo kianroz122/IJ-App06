@@ -123,9 +123,10 @@ public class Game
     {
        player.getSoberRating();
        Beers.getAlcoholLevel();
-        int n = rand.nextInt();
+        int n = rand.nextInt(50);//works on individual beers alcohol level but not general
         player.setSoberRating(player.getSoberRating()- n);
         System.out.print("Sober Rating = " + player.getSoberRating());
+        System.out.print("");
     }
 
 
@@ -209,5 +210,11 @@ public class Game
         else {
             return true;  // signal that we want to quit
         }
+    }
+
+    private void end()
+    {
+        //if (Player.getSoberRating() >= 0)
+            System.exit(0);
     }
 }
