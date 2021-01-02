@@ -114,6 +114,7 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+
         }
         return wantToQuit;
     }
