@@ -10,6 +10,7 @@ public enum Beers
     VODKA("vodka",35),
     TEQUILA("tequila",50);
 
+    private static int alcoholLevel;
     private String beerString;
     private int alcoholLevel;
 
