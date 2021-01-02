@@ -29,7 +29,6 @@ public class Map
     {
         connectRooms();
         startRoom = square; //Game starts outside
-
     }
 
     /**
@@ -117,7 +116,7 @@ public class Map
     private void connectThreecrown()
     {
         threeCrown.setExit("north", trafalgar);
-        threeCrown.setItem(Beers.NONE);
+        threeCrown.setItem(Beers.TEQUILA);
     }
 
     private void connectQueenvic()
@@ -150,7 +149,7 @@ public class Map
     private void connectPriory()
     {
         priory.setExit("north", horseAndJockey);
-        priory.setItem(Beers.NONE);
+        priory.setItem(Beers.TEQUILA);
     }
 
     private void connectCrown()
