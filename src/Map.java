@@ -65,7 +65,7 @@ public class Map
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
         square.setItem(Beers.NEWCASTLE);
-        square.setItem(Beers.VODKA);
+
     }
 
 //These 3 rooms only go back to the square//
@@ -132,7 +132,7 @@ public class Map
         lordNelson.setExit("east", horseAndJockey);
         lordNelson.setExit("south", vineyard);
         lordNelson.setExit("west", harbourmaster);
-        lordNelson.setItem(Beers.HOPHOUSE);
+        lordNelson.setItem(Beers.VODKA);
     }
 
     private void connectHarbourmaster()
