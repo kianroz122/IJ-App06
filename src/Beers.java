@@ -12,7 +12,7 @@ public enum Beers
 
     private static int alcoholLevel;
     private String beerString;
-    private int alcoholLevel;
+
 
     Beers(String beerString,int alcoholLevel)
     {
