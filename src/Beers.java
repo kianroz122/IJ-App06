@@ -17,6 +17,7 @@ public enum Beers
     {
         this.beerString = beerString;
     }
+    
 
     public String toString()
     {
