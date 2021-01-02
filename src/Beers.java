@@ -24,7 +24,7 @@ public enum Beers
         return beerString;
     }
 
-    public int getAlcoholLevel()
+    public static int getAlcoholLevel()
     {
         return alcoholLevel;
     }
