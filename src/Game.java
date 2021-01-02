@@ -121,7 +121,7 @@ public class Game
     private void drink(Command command)
     {
        player.getSoberRating();
-       Beers.getAlchoholLevel();
+       Beers.getAlcoholLevel();
         int n = rand.nextInt();
         player.setSoberRating(player.getSoberRating()- n);
         System.out.print("Sober Rating = " + player.getSoberRating());
@@ -161,7 +161,7 @@ public class Game
     private void printHelp() 
     {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("around the square");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
