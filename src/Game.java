@@ -107,8 +107,8 @@ public class Game
                 pickupItem(command);
                 break;
 
-            case DRINK:
-                drink(command);
+            case CONSUME:
+                consume(command);
                 break;
 
             case QUIT:
@@ -119,7 +119,8 @@ public class Game
         return wantToQuit;
     }
 
-    private void drink(Command command)
+
+    private void consume(Command command)
     {
        player.getSoberRating();
        Beers.getAlcoholLevel();
