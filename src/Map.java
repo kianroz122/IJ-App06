@@ -74,7 +74,6 @@ public class Map
 
     {
         queensHead.setExit("east", square);
-        queensHead.setItem(Beers.CAMDEN_HELLS);
         queensHead.setItem(Beers.KEBAB);
 
     }
@@ -83,14 +82,14 @@ public class Map
     {
         revolutions.setExit("west", square);
         revolutions.setItem(Beers.REDSTRIPE);
-        revolutions.setItem(Beers.CHICKEN);
+
     }
 
     private void connectButlers()
     {
         butlers.setExit("south", square);
         butlers.setItem(Beers.STRONGBOW);
-        butlers.setItem(Beers.NUTS);
+
     }
 
     //The antelope goes north back to the square or south to greyhound//
@@ -108,7 +107,7 @@ public class Map
         greyhound.setExit("north", antelope);
         greyhound.setExit("west", queenvic);
         greyhound.setExit("south", lordNelson);
-        greyhound.setItem(Beers.NONE);
+        revolutions.setItem(Beers.CHICKEN);
     }
 
     private void connectTrafalgar()
@@ -121,13 +120,13 @@ public class Map
     private void connectThreecrown()
     {
         threeCrown.setExit("north", trafalgar);
-        threeCrown.setItem(Beers.TEQUILA);
+        revolutions.setItem(Beers.CHICKEN);
     }
 
     private void connectQueenvic()
     {
         queenvic.setExit("east", greyhound);
-        queenvic.setItem(Beers.NEWCASTLE);
+        queenvic.setItem(Beers.CAMDEN_HELLS);
     }
 
     private void connectLordnelson()
@@ -136,7 +135,7 @@ public class Map
         lordNelson.setExit("east", horseAndJockey);
         lordNelson.setExit("south", vineyard);
         lordNelson.setExit("west", harbourmaster);
-        lordNelson.setItem(Beers.VODKA);
+        lordNelson.setItem(Beers.NUTS);
     }
 
     private void connectHarbourmaster()
