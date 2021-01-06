@@ -65,6 +65,7 @@ public class Map
         square.setExit("west", queensHead);
         square.setItem(Beers.NEWCASTLE);
 
+
     }
 
 //These 3 rooms only go back to the square//
@@ -74,18 +75,22 @@ public class Map
     {
         queensHead.setExit("east", square);
         queensHead.setItem(Beers.CAMDEN_HELLS);
+        queensHead.setItem(Beers.KEBAB);
+
     }
 
     private void connectRevolutions()
     {
         revolutions.setExit("west", square);
         revolutions.setItem(Beers.REDSTRIPE);
+        revolutions.setItem(Beers.CHICKEN);
     }
 
     private void connectButlers()
     {
         butlers.setExit("south", square);
         butlers.setItem(Beers.STRONGBOW);
+        butlers.setItem(Beers.NUTS);
     }
 
     //The antelope goes north back to the square or south to greyhound//
