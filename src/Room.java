@@ -62,7 +62,7 @@ public class Room
     public String getLongDescription()
     {
         String output = "You are " + description + ".\n" + getExitString();
-        output = output + "\n these drinks are available: " + beer;
+        output = output + "\n these items are available: " + beer;
         return output;
     }
 
