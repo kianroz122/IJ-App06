@@ -8,7 +8,11 @@ public enum Beers
     STRONGBOW("strongbow",4),
     HOPHOUSE("hophouse",6),
     VODKA("vodka",35),
-    TEQUILA("tequila",50);
+    TEQUILA("tequila",50),
+    KEBAB("kebab"),
+    CHICKEN("chicken"),
+    NUTS("nuts");
+
 
     private static int alcoholLevel;
     private String beerString;
