@@ -9,9 +9,9 @@ public enum Beers
     HOPHOUSE("hophouse",6),
     VODKA("vodka",35),
     TEQUILA("tequila",50),
-    KEBAB("kebab"),
-    CHICKEN("chicken"),
-    NUTS("nuts");
+    KEBAB("kebab", -2),
+    CHICKEN("chicken", -8),
+    NUTS("nuts", -4);
 
 
     private static int alcoholLevel;
