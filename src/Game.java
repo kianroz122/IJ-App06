@@ -17,13 +17,18 @@ import java.util.Random;
  * 
  * Modified and extended by Derek and Andrei
  */
-
+//test
 public class Game 
 {
     private final Parser parser;
     private Room currentRoom;
     private final Player player;
-    Random rand = new Random();
+    Random rand;
+
+    {
+        rand = new Random();
+    }
+
     /**
      * Create the game and initialise its internal map.
      */
@@ -106,16 +111,37 @@ public class Game
                 drink(command);
                 break;
 
+            case EAT:
+                eat(command);
+                break;
+
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+
         }
         return wantToQuit;
     }
 
+
     private void drink(Command command)
     {
-       // player.setSoberRating(int number);
+       player.getSoberRating();
+       Beers.getAlcoholLevel();
+        int n = rand.nextInt(50);//works on individual beers alcohol level but not general
+        player.setSoberRating(player.getSoberRating()- n);
+        System.out.print("Sober Rating = " + player.getSoberRating());
+        System.out.print("");
+    }
+
+    private void eat(Command command)
+    {
+        player.getSoberRating();
+        Beers.getAlcoholLevel();
+        int n = rand.nextInt(20);//works on individual beers alcohol level but not general
+        player.setSoberRating(player.getSoberRating()+ n);
+        System.out.print("Sober Rating = " + player.getSoberRating());
+        System.out.print("");
     }
 
 
@@ -152,7 +178,7 @@ public class Game
     private void printHelp() 
     {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("around the square");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
@@ -199,5 +225,11 @@ public class Game
         else {
             return true;  // signal that we want to quit
         }
+    }
+
+    private void end()
+    {
+        //if (Player.getSoberRating() >= 0)
+            System.exit(0);
     }
 }

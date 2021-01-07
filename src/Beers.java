@@ -1,30 +1,33 @@
 
-public enum Beers
-{
-    NONE("none",0),
-    REDSTRIPE("redstripe",5),
-    NEWCASTLE("newcastle",6),
-    CAMDEN_HELLS("comdenhills",7),
-    STRONGBOW("strongbow",4),
-    HOPHOUSE("hophouse",6),
-    VODKA("vodka",35),
-    TEQUILA("tequila",50);
+public enum Beers {
+    NONE("none", 0),
+    NUTS("nuts", -2),
+    KEBAB("kebab", -8),
+    CHICKEN("chicken", 6),
+    CAMDEN_HELLS("camdenhells", 7),
+    HOPHOUSE("hophouse", 6),
+    NEWCASTLE("newcastle", 6),
+    REDSTRIPE("redstripe", 5),
+    STRONGBOW("strongbow", 4),
+    TEQUILA("tequila", 50),
+    VODKA("vodka", 35);
 
+
+
+    private static int alcoholLevel;
     private String beerString;
-    private int alcoholLevel;
 
-    Beers(String beerString,int alcoholLevel)
-    {
+
+    Beers(String beerString, int alcoholLevel) {
         this.beerString = beerString;
     }
 
-    public String toString()
-    {
+
+    public String toString() {
         return beerString;
     }
 
-    public int getAlcoholLevel()
-    {
+    public static int getAlcoholLevel() {
         return alcoholLevel;
     }
 
