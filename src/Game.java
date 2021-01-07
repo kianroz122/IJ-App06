@@ -107,8 +107,12 @@ public class Game
                 pickupItem(command);
                 break;
 
-            case CONSUME:
-                consume(command);
+            case DRINK:
+                drink(command);
+                break;
+
+            case EAT:
+                eat(command);
                 break;
 
             case QUIT:
@@ -120,12 +124,22 @@ public class Game
     }
 
 
-    private void consume(Command command)
+    private void drink(Command command)
     {
        player.getSoberRating();
        Beers.getAlcoholLevel();
         int n = rand.nextInt(50);//works on individual beers alcohol level but not general
         player.setSoberRating(player.getSoberRating()- n);
+        System.out.print("Sober Rating = " + player.getSoberRating());
+        System.out.print("");
+    }
+
+    private void eat(Command command)
+    {
+        player.getSoberRating();
+        Beers.getAlcoholLevel();
+        int n = rand.nextInt(20);//works on individual beers alcohol level but not general
+        player.setSoberRating(player.getSoberRating()+ n);
         System.out.print("Sober Rating = " + player.getSoberRating());
         System.out.print("");
     }
