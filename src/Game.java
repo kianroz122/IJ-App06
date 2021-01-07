@@ -231,5 +231,7 @@ public class Game
     {
         //if (Player.GetSoberRating() >= 0)
             System.exit(0);
+            //if (currentRoom == "home")
+                System.exit(0);
     }
 }
