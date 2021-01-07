@@ -28,7 +28,7 @@ public class Map
     public Map()
     {
         connectRooms();
-        startRoom = square; //Game starts outside
+        startRoom = crown; //Game starts outside
     }
 
     /**
@@ -64,8 +64,6 @@ public class Map
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
         square.setItem(Beers.NEWCASTLE);
-
-
     }
 
 //These 3 rooms only go back to the square//
