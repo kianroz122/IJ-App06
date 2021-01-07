@@ -229,7 +229,7 @@ public class Game
 
     private void end()
     {
-        //if (Player.getSoberRating() >= 0)
+        //if (Player.GetSoberRating() >= 0)
             System.exit(0);
     }
 }
