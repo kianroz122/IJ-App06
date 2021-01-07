@@ -1,12 +1,13 @@
 /**
  * Write a description of class Map here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Kian, Alex, Atish)
+ * @version (20/12/20)
  */
 
 public class Map
 {
+<<<<<<< HEAD
     private Room square = new Room("A pub in each direction, which do you visit first?");
     private Room revolutions = new Room("in rev's, the floors sticky"),
             antelope = new Room("the bouncer doesn't even ask for ID!"),
@@ -25,17 +26,37 @@ public class Map
             home;
     private Room startRoom;
 
+=======
+    private final Room square = new Room("in the square with a pub in each direction, which do you visit first?");
+    private final Room revolutions = new Room("in rev's, the floors sticky");
+    private final Room antelope = new Room("the bouncer doesn't even ask for ID!");
+    private final Room queensHead = new Room("queensHead");
+    private final Room butlers = new Room("Butlers they serve pizza in here");
+    private final Room greyhound = new Room("greyhound");
+    private final Room trafalgar = new Room("trafalgar");
+    private final Room threeCrown = new Room("threeCrown");
+    private final Room queenvic = new Room("queenvic");
+    private final Room lordNelson = new Room("lordNelson");
+    private final Room harbourmaster = new Room("harbourmaster");
+    private final Room horseAndJockey = new Room("horseAndJockey");
+    private final Room vineyard = new Room("vineyard");
+    private final Room priory = new Room(" priory");
+    private final Room crown = new Room("crown");
+    private final Room home = new Room("home");
+    private final Room startRoom;
+    
+>>>>>>> 3fc63d1dbe0d14933a7745bd2d4d2267371aab21
     public Map()
     {
-        createRooms();
+        connectRooms();
         startRoom = square; //Game starts outside
-        butlers.setItem(Items.PIZZA);
+        square.setItem(Beers.NEWCASTLE);
     }
 
     /**
      * Create all the rooms and link their exits together.
      */
-    private void createRooms()
+    private void connectRooms()
     {
         //connect each room//
         connectSquare();
@@ -63,6 +84,7 @@ public class Map
         square.setExit("east", revolutions);
         square.setExit("south", antelope);
         square.setExit("west", queensHead);
+        revolutions.setItem(Beers.NEWCASTLE);
     }
 
 //These 3 rooms only go back to the square//
@@ -75,6 +97,7 @@ public class Map
     private void connectRevolutions()
     {
         revolutions.setExit("west", square);
+
     }
 
     private void connectButlers()
