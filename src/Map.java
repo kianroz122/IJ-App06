@@ -24,7 +24,8 @@ public class Map
     private final Room crown = new Room("in the crown");
     private final Room home = new Room("in the home");
     private final Room startRoom;
-    
+
+
     public Map()
     {
         connectRooms();

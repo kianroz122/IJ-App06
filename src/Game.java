@@ -236,6 +236,7 @@ public class Game
 
     private void checkFinish()
     {
+<<<<<<< HEAD
         int rating = player.getSoberRating();
 
         if (rating <= 0 && currentRoom.getShortDescription().contains("home"))
@@ -259,5 +260,11 @@ public class Game
             System.out.print("Try harder! Your score is only" + player.getSoberRating());
         }
         System.exit(0);
+=======
+        //if (Player.GetSoberRating() >= 0)
+            System.exit(0);
+            //if (currentRoom == "home")
+                System.exit(0);
+>>>>>>> 92423006d92de5db4d7522de229a936552efb575
     }
 }
