@@ -7,26 +7,6 @@
 
 public class Map
 {
-<<<<<<< HEAD
-    private Room square = new Room("A pub in each direction, which do you visit first?");
-    private Room revolutions = new Room("in rev's, the floors sticky"),
-            antelope = new Room("the bouncer doesn't even ask for ID!"),
-            queensHead = new Room("//"),
-            butlers = new Room("they serve pizza in here"),
-            greyhound = new Room("//"),
-            trafalgar = new Room("//"),
-            threeCrown = new Room("//"),
-            queenvic = new Room("//"),
-            lordNelson = new Room("//"),
-            harbourmaster,
-            horseAndJockey,
-            vineyard,
-            priory,
-            crown,
-            home;
-    private Room startRoom;
-
-=======
     private final Room square = new Room("in the square with a pub in each direction, which do you visit first?");
     private final Room revolutions = new Room("in rev's, the floors sticky");
     private final Room antelope = new Room("in the Antelope, the bouncer doesn't even ask for ID!");
@@ -44,8 +24,8 @@ public class Map
     private final Room crown = new Room("in the crown");
     private final Room home = new Room("in the home");
     private final Room startRoom;
-    
->>>>>>> 3fc63d1dbe0d14933a7745bd2d4d2267371aab21
+
+
     public Map()
     {
         connectRooms();
