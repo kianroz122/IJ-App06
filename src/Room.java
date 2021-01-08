@@ -3,32 +3,34 @@ import java.util.HashMap;
 
 /**
  * Class Room - a room in an adventure game.
- *
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- *
- * A "Room" represents one location in the scenery of the game.  It is 
- * connected to other rooms via exits.  For each existing exit, the room 
+ * <p>
+ * This class is part of the "World of Zuul" application.
+ * "World of Zuul" is a very simple, text based adventure game.
+ * <p>
+ * A "Room" represents one location in the scenery of the game.  It is
+ * connected to other rooms via exits.  For each existing exit, the room
  * stores a reference to the neighboring room.
- * 
- * @author  Michael Kölling and David J. Barnes
+ *
+ * @author Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
 
-public class Room 
+public class Room
 {
     private String description;
     // String is the key to a room in that direction
     // east would be an exit that goes to the Room
     private HashMap<String, Room> exits;
     private Beers beer;
+
     /**
      * Create a room described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
+     *
      * @param description The room's description.
      */
-    public Room(String description) 
+    public Room(String description)
     {
         this.description = description;
         exits = new HashMap<>();
@@ -36,10 +38,11 @@ public class Room
 
     /**
      * Define an exit from this room.
+     *
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Room neighbor) 
+    public void setExit(String direction, Room neighbor)
     {
         exits.put(direction, neighbor);
     }
@@ -55,8 +58,9 @@ public class Room
 
     /**
      * Return a description of the room in the form:
-     *     You are in the kitchen.
-     *     Exits: north west
+     * You are in the kitchen.
+     * Exits: north west
+     *
      * @return A long description of this room
      */
     public String getLongDescription()
@@ -69,14 +73,15 @@ public class Room
     /**
      * Return a string describing the room's exits, for example
      * "Exits: north west".
+     *
      * @return Details of the room's exits.
      */
     private String getExitString()
     {
         String returnString = "Exits:";
         Set<String> keys = exits.keySet();
-        
-        for(String exit : keys) 
+
+        for (String exit : keys)
         {
             returnString += " " + exit;
         }
@@ -86,10 +91,11 @@ public class Room
     /**
      * Return the room that is reached if we go from this room in direction
      * "direction". If there is no room in that direction, return null.
+     *
      * @param direction The exit's direction.
      * @return The room in the given direction.
      */
-    public Room getExit(String direction) 
+    public Room getExit(String direction)
     {
         return exits.get(direction);
     }
