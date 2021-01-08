@@ -1,0 +1,113 @@
+C:\Users\Kian\.jdks\openjdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=52094:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Kian\Desktop\IJ-App06\out\production\App06-Zuul Main
+
+Welcome to Blacked Out
+It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well
+Type 'help' if you need help. 
+
+
+Sober metre: 100
+
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go north
+You are in Butlers.
+Exits: south
+ these items are available: strongbow
+> pickup strongbow
+Picked up strongbow
+> drink
+Sober Rating = 64> drop
+> drop strongbow
+> south
+I don't know what you mean...
+> go south
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go east
+You are in rev's, the floors sticky.
+Exits: west
+ these items are available: chicken
+> pickup chicken
+Picked up chicken
+> eat
+Sober Rating = 71> drop
+> go west
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go east
+You are in rev's, the floors sticky.
+Exits: west
+ these items are available: none
+> go west
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go south
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: vodka
+> pickup vodka
+Picked up vodka
+> drink
+Sober Rating = 63> drop
+> go east
+You are in the trafalgar.
+Exits: south west
+ these items are available: redstripe
+> pickup redstripe
+Picked up redstripe
+> drink
+Sober Rating = 14> go south
+You are in the threeCrown.
+Exits: north
+ these items are available: null
+> go north
+You are in the trafalgar.
+Exits: south west
+ these items are available: none
+> go west
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: none
+> go south
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go south
+You are in the lordNelson.
+Exits: east south north west
+ these items are available: nuts
+> pickup nuts
+Picked up nuts
+> eat
+Sober Rating = 16> go down
+There is no door!
+> go west
+You are in the harbourmaster.
+Exits: east
+ these items are available: strongbow
+> pickup strongbow
+Picked up strongbow
+> drink
+Sober Rating = 6> go east
+You are in the lordNelson.
+Exits: east south north west
+ these items are available: none
+> go east
+You are in the horseAndJockey.
+Exits: west
+ these items are available: tequila
+> go west
+You are in the lordNelson.
+Exits: east south north west
+ these items are available: none
+> go south
+You are in the vineyard.
+Exits: south north
+ these items are available: hophouse
+> go south
+Try harder! Your score is only 6
+Process finished with exit code 0
