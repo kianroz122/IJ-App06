@@ -18,7 +18,7 @@ import java.util.Random;
  * Modified and extended by Derek and Andrei
  */
 //test
-public class Game 
+public class Game
 {
     private final Parser parser;
     private Room currentRoom;
@@ -32,7 +32,7 @@ public class Game
     /**
      * Create the game and initialise its internal map.
      */
-    public Game() 
+    public Game()
     {
         parser = new Parser();
         Map map = new Map();
@@ -42,23 +42,23 @@ public class Game
     }
 
     /**
-     *  Main play routine.  Loops until end of play.
+     * Main play routine.  Loops until end of play.
      */
-    public void play() 
-    {            
+    public void play()
+    {
         printWelcome();
 
         // Enter the main command loop.  Here we repeatedly read commands and
         // execute them until the game is over.
-                
+
         boolean finished = false;
-        
-        while (! finished) 
+
+        while (!finished)
         {
             Command command = parser.getCommand();
             finished = processCommand(command);
         }
-        
+
         System.out.println("Thank you for playing.  Good bye.");
     }
 
@@ -73,17 +73,18 @@ public class Game
         System.out.println("Type '" + CommandWord.HELP + "' if you need help. ");
         System.out.println();
         System.out.println();
-        System.out.println("Sober metre: "+ player.getSoberRating());
+        System.out.println("Sober metre: " + player.getSoberRating());
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
 
     /**
      * Given a command, process (that is: execute) the command.
+     *
      * @param command The command to be processed.
      * @return true If the command ends the game, false otherwise.
      */
-    private boolean processCommand(Command command) 
+    private boolean processCommand(Command command)
     {
         boolean wantToQuit = false;
 
@@ -126,10 +127,10 @@ public class Game
 
     private void drink(Command command)
     {
-       player.getSoberRating();
-       Beers.getAlcoholLevel();
+        player.getSoberRating();
+        Beers.getAlcoholLevel();
         int n = rand.nextInt(50);//works on individual beers alcohol level but not general
-        player.setSoberRating(player.getSoberRating()- n);
+        player.setSoberRating(player.getSoberRating() - n);
         System.out.print("Sober Rating = " + player.getSoberRating());
         System.out.print("");
     }
@@ -139,7 +140,7 @@ public class Game
         player.getSoberRating();
         Beers.getAlcoholLevel();
         int n = rand.nextInt(20);//works on individual beers alcohol level but not general
-        player.setSoberRating(player.getSoberRating()+ n);
+        player.setSoberRating(player.getSoberRating() + n);
         System.out.print("Sober Rating = " + player.getSoberRating());
         System.out.print("");
     }
@@ -147,7 +148,7 @@ public class Game
 
     private void pickupItem(Command command)
     {
-        if(!command.hasSecondWord())
+        if (!command.hasSecondWord())
         {
             // if there is no second word, we don't know where to go...
             System.out.println("Pick up what?");
@@ -156,7 +157,7 @@ public class Game
         String word = command.getSecondWord();
         Beers item = currentRoom.getItem();
 
-        if(word.equals(item.toString()))
+        if (word.equals(item.toString()))
         {
             player.pickup(item);
             currentRoom.removeItem();
@@ -172,10 +173,10 @@ public class Game
 
     /**
      * Print out some help information.
-     * Here we print some stupid, cryptic message and a list of the 
+     * Here we print some stupid, cryptic message and a list of the
      * command words.
      */
-    private void printHelp() 
+    private void printHelp()
     {
         System.out.println("You are lost. You are alone. You wander");
         System.out.println("around the square");
@@ -184,13 +185,13 @@ public class Game
         parser.showCommands();
     }
 
-    /** 
+    /**
      * Try to go in one direction. If there is an exit, enter the new
      * room, otherwise print an error message.
      */
-    private void goRoom(Command command) 
+    private void goRoom(Command command)
     {
-        if(!command.hasSecondWord()) 
+        if (!command.hasSecondWord())
         {
             // if there is no second word, we don't know where to go...
             System.out.println("Go where?");
@@ -202,34 +203,65 @@ public class Game
         // Try to leave current room.
         Room nextRoom = currentRoom.getExit(direction);
 
-        if (nextRoom == null) {
+        if (nextRoom == null)
+        {
             System.out.println("There is no door!");
         }
-        else {
+        else
+        {
             currentRoom = nextRoom;
+            checkFinish();
             System.out.println(currentRoom.getLongDescription());
         }
     }
 
-    /** 
+    /**
      * "Quit" was entered. Check the rest of the command to see
      * whether we really quit the game.
+     *
      * @return true, if this command quits the game, false otherwise.
      */
-    private boolean quit(Command command) 
+    private boolean quit(Command command)
     {
-        if(command.hasSecondWord()) {
+        if (command.hasSecondWord())
+        {
             System.out.println("Quit what?");
             return false;
         }
-        else {
+        else
+        {
             return true;  // signal that we want to quit
         }
     }
 
-    private void end()
+    private void checkFinish()
     {
-        //if (Player.getSoberRating() >= 0)
+        int rating = player.getSoberRating();
+
+        if (rating <= 0)
+        {
+            System.out.println("You lightweight, game over! Your sober rating is: " + player.getSoberRating());
             System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() < 20 && currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() > 20 && currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() < 50&& currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() > 50 && rating < 100&& currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+        }
     }
 }
