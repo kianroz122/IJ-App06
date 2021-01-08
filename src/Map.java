@@ -2,7 +2,7 @@
  * Write a description of class Map here.
  *
  * @author (Kian, Alex, Atish)
- * @version (20/12/20)
+ * @version (20 / 12 / 20)
  */
 
 public class Map
