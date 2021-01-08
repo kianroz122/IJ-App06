@@ -236,35 +236,32 @@ public class Game
 
     private void checkFinish()
     {
-<<<<<<< HEAD
         int rating = player.getSoberRating();
 
-        if (rating <= 0 && currentRoom.getShortDescription().contains("home"))
+        if (rating <= 0)
         {
-            System.out.println("You lightweight, game over! Your sober rating is:" + player.getSoberRating());
-        }
-        else if (rating > 0 && player.getSoberRating() < 20)
-        {
-            System.out.print("Try harder! Your score is only" + player.getSoberRating());
-        }
-        else if (rating > 0 && player.getSoberRating() > 20)
-        {
-            System.out.print("Try harder! Your score is only" + player.getSoberRating());
-        }
-        else if (rating > 0 && player.getSoberRating() < 50)
-        {
-            System.out.print("Try harder! Your score is only" + player.getSoberRating());
-        }
-        else if (rating > 0 && player.getSoberRating() > 50 && rating < 100)
-        {
-            System.out.print("Try harder! Your score is only" + player.getSoberRating());
-        }
-        System.exit(0);
-=======
-        //if (Player.GetSoberRating() >= 0)
+            System.out.println("You lightweight, game over! Your sober rating is: " + player.getSoberRating());
             System.exit(0);
-            //if (currentRoom == "home")
-                System.exit(0);
->>>>>>> 92423006d92de5db4d7522de229a936552efb575
+
+        } else if (rating > 0 && player.getSoberRating() < 20 && currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() > 20 && currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() < 50&& currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+
+        } else if (rating > 0 && player.getSoberRating() > 50 && rating < 100&& currentRoom.getShortDescription().contains("home"))
+        {
+            System.out.print("Try harder! Your score is only " + player.getSoberRating());
+            System.exit(0);
+        }
     }
 }

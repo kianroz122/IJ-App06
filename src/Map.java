@@ -29,7 +29,7 @@ public class Map
     public Map()
     {
         connectRooms();
-        startRoom = crown; //Game starts outside
+        startRoom = square; //Game starts outside
     }
 
     /**
