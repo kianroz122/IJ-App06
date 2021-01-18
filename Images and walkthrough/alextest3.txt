@@ -1,0 +1,48 @@
+C:\Users\cleme\.jdks\openjdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar=57983:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\cleme\Desktop\kianrapo\out\production\kianrapo Main
+
+Welcome to Blacked Out
+It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well
+Type 'help' if you need help. 
+
+
+Sober metre: 100
+
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go south
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: vodka
+> pickup vodka
+Picked up vodka
+> drink vodka
+Sober Rating = 76> go south
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go west
+You are in the queenvic.
+Exits: east
+ these items are available: camdenhells
+> go east
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go south
+You are in the lordNelson.
+Exits: east south north west
+ these items are available: nuts
+> pickup nuts
+Picked up nuts
+> eat nuts
+Sober Rating = 83> go south
+You are in the vineyard.
+Exits: south north
+ these items are available: hophouse
+> pickup hophouse
+Picked up hophouse
+> drink hophouse
+Sober Rating = 52> go south
+Try harder! Your score is only 52
+Process finished with exit code 0

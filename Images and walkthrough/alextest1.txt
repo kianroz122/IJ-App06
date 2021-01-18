@@ -1,0 +1,108 @@
+C:\Users\cleme\.jdks\openjdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar=57905:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\cleme\Desktop\kianrapo\out\production\kianrapo Main
+
+Welcome to Blacked Out
+It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well
+Type 'help' if you need help. 
+
+
+Sober metre: 100
+
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> pickup newcastle
+Picked up newcastle
+> drink newcastle
+Sober Rating = 75> go north
+You are in Butlers.
+Exits: south
+ these items are available: strongbow
+> pickup strongbow
+Picked up strongbow
+> drink strongbow
+Sober Rating = 71> go south
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: none
+> go east
+You are in rev's, the floors sticky.
+Exits: west
+ these items are available: chicken
+> pickup chicken
+Picked up chicken
+> drop chicken
+> eat chicken
+Sober Rating = 87> go west
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: none
+> go west
+You are in the queensHead.
+Exits: east
+ these items are available: kebab
+> pickup kebab
+Picked up kebab
+> east kebab
+I don't know what you mean...
+> eat kebab
+Sober Rating = 96> go east
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: none
+> go south
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: vodka
+> pickup vodka
+Picked up vodka
+> drink vodka
+Sober Rating = 56> go east
+You are in the trafalgar.
+Exits: south west
+ these items are available: redstripe
+> pickup redstripe
+Picked up redstripe
+> drink redstripe
+Sober Rating = 15> go south
+You are in the threeCrown.
+Exits: north
+ these items are available: null
+> go north
+You are in the trafalgar.
+Exits: south west
+ these items are available: none
+> go west
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: none
+> go south
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go west
+You are in the queenvic.
+Exits: east
+ these items are available: camdenhells
+> pickup camdenhells
+Picked up camdenhells
+> drink camdenhells
+Sober Rating = 13> go east
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go south
+You are in the lordNelson.
+Exits: east south north west
+ these items are available: nuts
+> pickup nuts
+Picked up nuts
+> drink nuts
+Sober Rating = -16> eat nuts
+Sober Rating = -5> eat nuts
+Sober Rating = 2> eat nuts
+Sober Rating = 8> eat nuts
+Sober Rating = 10> drink nuts
+Sober Rating = -37> go east
+You lightweight, game over! Your sober rating is: -37
+
+Process finished with exit code 0

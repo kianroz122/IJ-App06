@@ -1,0 +1,27 @@
+C:\Users\cleme\.jdks\openjdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\lib\idea_rt.jar=58013:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\cleme\Desktop\kianrapo\out\production\kianrapo Main
+
+Welcome to Blacked Out
+It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well
+Type 'help' if you need help. 
+
+
+Sober metre: 100
+
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> help
+You are lost. You are alone. You wander
+around the square
+
+Your command words are:
+drop  help  go  pickup  eat  quit  drink  
+> ?
+I don't know what you mean...
+> pickup newcastle
+Picked up newcastle
+> drop newcastle
+> quit
+Thank you for playing.  Good bye.
+
+Process finished with exit code 0

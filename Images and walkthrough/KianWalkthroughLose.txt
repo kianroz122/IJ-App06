@@ -1,0 +1,92 @@
+C:\Users\Kian\.jdks\openjdk-15.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\lib\idea_rt.jar=52238:C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\Kian\Desktop\IJ-App06\out\production\App06-Zuul Main
+
+Welcome to Blacked Out
+It's Your mates 21st Birthday so let's make this a sesh you'll never forget... Well
+Type 'help' if you need help. 
+
+
+Sober metre: 100
+
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> help
+You are lost. You are alone. You wander
+around the square
+
+Your command words are:
+drop  help  go  pickup  eat  quit  drink  
+> go north
+You are in Butlers.
+Exits: south
+ these items are available: strongbow
+> pickup strongbow
+Picked up strongbow
+> drink
+Sober Rating = 93> go south
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> go east
+You are in rev's, the floors sticky.
+Exits: west
+ these items are available: chicken
+> pickup chicken
+Picked up chicken
+> eat
+Sober Rating = 112> go west
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: newcastle
+> pickup newcastle
+Picked up newcastle
+> drink
+Sober Rating = 99> go east
+You are in rev's, the floors sticky.
+Exits: west
+ these items are available: none
+> go west
+You are in the square with a pub in each direction, which do you visit first?.
+Exits: east south north west
+ these items are available: none
+> go south
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: vodka
+> pickup vodka
+Picked up vodka
+> drink
+Sober Rating = 65> go east
+You are in the trafalgar.
+Exits: south west
+ these items are available: redstripe
+> pickup redstripe
+Picked up redstripe
+> drink
+Sober Rating = 28> go south
+You are in the threeCrown.
+Exits: north
+ these items are available: null
+> go north
+You are in the trafalgar.
+Exits: south west
+ these items are available: none
+> go west
+You are in the Antelope, the bouncer doesn't even ask for ID!.
+Exits: east south north
+ these items are available: none
+> go south
+You are in the greyhound.
+Exits: south north west
+ these items are available: null
+> go west
+You are in the queenvic.
+Exits: east
+ these items are available: camdenhells
+> pickup camdenhells
+Picked up camdenhells
+> drink
+Sober Rating = -13> go east
+You lightweight, game over! Your sober rating is: -13
+
+Process finished with exit code 0
