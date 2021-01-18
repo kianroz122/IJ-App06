@@ -17,7 +17,7 @@ import java.util.Random;
  * 
  * Modified and extended by Derek and Andrei
  */
-//test
+
 public class Game
 {
     private final Parser parser;
@@ -124,6 +124,9 @@ public class Game
         return wantToQuit;
     }
 
+    /**
+     *When player drinks a beer it prints out the new sober rating
+     */
 
     private void drink(Command command)
     {
@@ -135,6 +138,9 @@ public class Game
         System.out.print("");
     }
 
+    /**
+     * When player eats any food picked up it prints the new sober rating, increased
+     */
     private void eat(Command command)
     {
         player.getSoberRating();
@@ -145,7 +151,9 @@ public class Game
         System.out.print("");
     }
 
-
+    /**
+     * Pick up an item
+     */
     private void pickupItem(Command command)
     {
         if (!command.hasSecondWord())
@@ -234,6 +242,9 @@ public class Game
         }
     }
 
+    /**
+     * Checks that the players sober rating is low enough to end the game
+     */
     private void checkFinish()
     {
         int rating = player.getSoberRating();
