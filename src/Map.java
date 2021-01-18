@@ -25,7 +25,9 @@ public class Map
     private final Room home = new Room("in the home");
     private final Room startRoom;
 
-
+    /**
+     * Game starts outside at the square
+     */
     public Map()
     {
         connectRooms();
@@ -57,7 +59,9 @@ public class Map
     }
 
 
-    // initialise room exits
+    /**
+     * Initialize room exits
+     */
     private void connectSquare()
     {
         square.setExit("north", butlers);
@@ -67,7 +71,9 @@ public class Map
         square.setItem(Beers.NEWCASTLE);
     }
 
-//These 3 rooms only go back to the square//
+    /**
+     * Sets the room exits, the first three rooms only go back to the Square
+     */
 
     private void connectQueenshead()
 
@@ -90,8 +96,10 @@ public class Map
         butlers.setItem(Beers.STRONGBOW);
 
     }
+    /**
+     * The antelope goes north back to the square or south to greyhound/
+     */
 
-    //The antelope goes north back to the square or south to greyhound//
     private void connectAntelope()
     {
         antelope.setExit("north", square);
@@ -100,7 +108,10 @@ public class Map
         antelope.setItem(Beers.VODKA);
     }
 
-    //The greyhound leads north to the antelope, west to the queenvic and south to the lordnelson//
+    /**
+     * The greyhound leads north to the antelope, west to the queenvic and south to the lordnelson
+     */
+
     private void connectGreyhound()
     {
         greyhound.setExit("north", antelope);
@@ -109,6 +120,9 @@ public class Map
         revolutions.setItem(Beers.CHICKEN);
     }
 
+    /**
+     * Traflagar goes to the Antelope and the ThreeCrown
+     */
     private void connectTrafalgar()
     {
         trafalgar.setExit("west", antelope);
@@ -116,18 +130,27 @@ public class Map
         trafalgar.setItem(Beers.REDSTRIPE);
     }
 
+    /** Threecrown goes North back to the Trafalgar
+     *
+     */
     private void connectThreecrown()
     {
         threeCrown.setExit("north", trafalgar);
         revolutions.setItem(Beers.CHICKEN);
     }
 
+    /**
+     * The QueenVic goes east to the Greyhound
+     */
     private void connectQueenvic()
     {
         queenvic.setExit("east", greyhound);
         queenvic.setItem(Beers.CAMDEN_HELLS);
     }
 
+    /**
+     * The LordNelson foes to the Greyhound, HorseandJockey, Vineyard and HarbourMaster
+     */
     private void connectLordnelson()
     {
         lordNelson.setExit("north", greyhound);
@@ -137,30 +160,45 @@ public class Map
         lordNelson.setItem(Beers.NUTS);
     }
 
+    /**
+     * HarbourMaster goes back to the LordNelson
+     */
     private void connectHarbourmaster()
     {
         harbourmaster.setExit("east", lordNelson);
         harbourmaster.setItem(Beers.STRONGBOW);
     }
 
+    /**
+     * HorseandJockey foes west back to LordNelson
+     */
     private void connectHorseandjockey()
     {
         horseAndJockey.setExit("west", lordNelson);
         horseAndJockey.setItem(Beers.TEQUILA);
     }
 
+    /**
+     * Priory goes north to the HorseAndJockey
+     */
     private void connectPriory()
     {
         priory.setExit("north", horseAndJockey);
         priory.setItem(Beers.TEQUILA);
     }
 
+    /**
+     * The Crown goes North back to the Priory
+     */
     private void connectCrown()
     {
         crown.setExit("north", priory);
         crown.setItem(Beers.STRONGBOW);
     }
 
+    /**
+     * The VineYard goes North back to the LordNelson and South to Home - the game finishes
+     */
     private void connectVineyard()
     {
         vineyard.setExit("north", lordNelson);
@@ -168,12 +206,19 @@ public class Map
         vineyard.setItem(Beers.HOPHOUSE);
     }
 
+    /**
+     * Home goes North to the VineYard
+     */
     private void connectHome()
     {
         home.setExit("north", vineyard);
         home.setItem(Beers.NONE);
     }
 
+    /**
+     *
+     * Gets Square
+     */
     public Room getStartRoom()
     {
         return startRoom;

@@ -1,4 +1,5 @@
 
+/* Enum class for all of the food and drink */
 public enum Beers {
     NONE("none", 0),
     NUTS("nuts", -2),

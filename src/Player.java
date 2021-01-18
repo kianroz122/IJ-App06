@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Constructor, sets sober rating @ 100 and creates array list of beers and food
+ */
 public class Player
 {
     private int soberRating = 100;
@@ -13,7 +16,10 @@ public class Player
         this.name=name;
     }
 
-
+    /**
+     * Returns sober rating
+     * @param soberRating
+     */
     public void setSoberRating(int soberRating)
     {
         this.soberRating = soberRating;
@@ -34,6 +40,10 @@ public class Player
         return take;
     }
 
+    /**
+     * Adds item to inventory
+     * @param item
+     */
     public void pickup(Beers item)
     {
         itemList.add(item);
